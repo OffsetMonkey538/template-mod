@@ -1,41 +1,37 @@
 {
 	"schemaVersion": 1,
-	"id": "template-mod",
-	"version": "${version}",
-	"name": "Template Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"id": "${modId}",
+	"version": "${modVersion}",
+	"name": "${modName}",
+	"description": "${modDescription}",
 	"authors": [
-		"Me!"
+		"OffsetMonkey538"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.offsetmonkey538.top/${modId}"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/template-mod/icon.png",
+	"license": "${modLicense}",
+	"icon": "assets/${modId}/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"top.offsetmonkey538.templatemod.ExampleMod"
+			"${mavenGroup}.${modMainClass}"
 		],
 		"client": [
-			"top.offsetmonkey538.templatemod.ExampleModClient"
+			"${mavenGroup}.${modMainClass}Client"
 		]
 	},
 	"mixins": [
-		"template-mod.mixins.json",
+		"${modId}.mixins.json",
 		{
-			"config": "template-mod.client.mixins.json",
+			"config": "${modId}.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.14.14",
-		"minecraft": "~1.19.3",
-		"java": ">=17",
-		"fabric-api": "*"
+
 	},
 	"suggests": {
-		"another-mod": "*"
+
 	}
 }
