@@ -35,6 +35,12 @@ configurations {
 
 	include.extendsFrom includeModImplementation
 	modImplementation.extendsFrom includeModImplementation
+
+
+	includeImplementation
+
+	include.extendsFrom includeImplementation
+	implementation.extendsFrom includeImplementation
 }
 
 dependencies {
