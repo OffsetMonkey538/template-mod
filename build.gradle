@@ -68,25 +68,27 @@ dependencies {
 
 processResources {
 	inputs.properties(Map.of(
-			"modId",          project.mod_id,
-			"modVersion",     project.version,
-			"modName",        project.mod_name,
-			"modDescription", project.mod_description,
-			"modLicense",     project.mod_license,
-			"mavenGroup",     project.group,
-			"modMainClass",   project.mod_main_class
+			"modId",            project.mod_id,
+			"modVersion",       project.version,
+			"modName",          project.mod_name,
+			"modDescription",   project.mod_description,
+			"modLicense",       project.mod_license,
+			"mavenGroup",       project.group,
+			"modMainClass",     project.mod_main_class,
+			"minecraftVersion", project.supported_minecraft
 	))
 
 
 	filesMatching("fabric.mod.json") {
 		expand(Map.of(
-				"modId",          project.mod_id,
-				"modVersion",     project.version,
-				"modName",        project.mod_name,
-				"modDescription", project.mod_description,
-				"modLicense",     project.mod_license,
-				"mavenGroup",     project.group,
-				"modMainClass",   project.mod_main_class
+				"modId",            project.mod_id,
+				"modVersion",       project.version,
+				"modName",          project.mod_name,
+				"modDescription",   project.mod_description,
+				"modLicense",       project.mod_license,
+				"mavenGroup",       project.group,
+				"modMainClass",     project.mod_main_class,
+				"minecraftVersion", project.supported_minecraft
 		))
 	}
 }
